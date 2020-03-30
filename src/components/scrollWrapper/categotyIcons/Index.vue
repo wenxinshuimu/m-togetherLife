@@ -28,5 +28,6 @@ export default {
   .icon-wrapper {
     @include flex-row;
     background-color: #fff;
+    border-top: 1px solid #ccc;
   }
 </style>

@@ -27,7 +27,7 @@ export default {
     searchTitle: {
       type: Boolean,
       default() {
-        return true
+        return false
       }
     }
   },

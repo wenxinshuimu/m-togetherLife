@@ -67,7 +67,7 @@ export default {
     NoData
   },
   mounted () {
-    this.scroll = new BetterScroll(this.$refs.wrapper);
+    this.scroll = new BetterScroll(this.$refs.wrapper,{mouseWheel: true, click: true, tap: true});
   }
 }
 </script>

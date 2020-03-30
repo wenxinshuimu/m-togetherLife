@@ -37,20 +37,20 @@ export default {
     @include flex-column;
     @include vh-center;
     width: 20%;
-    padding: .1rem 0;
+    padding: .06rem 0;
     .icon {
       @include vh-center;
-      width: .4rem;
-      height: .4rem;
+      width: .25rem;
+      height: .25rem;
       border-radius: 50%;
       .iconfont {
         color: #fff;
-        font-size: .22rem;
+        font-size: .18rem;
       }
     }
     .icon-text {
-      font-size: .14rem;
-      margin-top: .1rem;
+      font-size: .13rem;
+      margin-top: .05rem;
     }
   }
 </style>

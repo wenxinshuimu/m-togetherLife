@@ -1,7 +1,6 @@
 <template>
   <div class="scroll-wrapper" ref="wrapper">
     <div class="scroll-content">
-      <category-icons></category-icons>
       <div v-if="!netWorkErrorShow">
         <view-list :viewDatas=homeDatas.viewDatas></view-list>
         <foods-list :foodDatas=homeDatas.foodDatas></foods-list>
@@ -19,7 +18,6 @@
 <script>
 import { mapState } from 'vuex'
 import BetterScroll from 'better-scroll'
-import CategoryIcons from './categotyIcons/Index'
 import { IndexModel } from 'models/index'
 import ViewList from './viewList/Index'
 import FoodsList from './foodsList/Index'
@@ -43,7 +41,7 @@ export default {
     }
   },
   components: {
-    CategoryIcons,
+    //CategoryIcons,
     ViewList,
     FoodsList,
     HotelList,
@@ -55,7 +53,7 @@ export default {
     ...mapState(['cityId'])
   },
   mounted () {
-    this.scroll = new BetterScroll(this.$refs.wrapper);
+    this.scroll = new BetterScroll(this.$refs.wrapper, {mouseWheel: true, click: true, tap: true});
     this.getHomeDatas(this.cityId);
     this.currentCityId = this.cityId
   },
